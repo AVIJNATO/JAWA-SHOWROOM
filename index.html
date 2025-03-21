@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAWA Motorcycles Showroom</title>
+  <meta name="description" content="Explore the legendary JAWA Motorcycles. Book a test ride, browse models, and experience the thrill of riding a JAWA.">
+  <meta name="keywords" content="JAWA Motorcycles, JAWA Perak, JAWA 42, JAWA Classic, motorcycle showroom, test ride">
+  <meta name="author" content="Your Showroom Name">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #d4af37;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      background: #333;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .models, .about, .test-rides, .contact {
+      margin-bottom: 60px;
+    }
+
+    .models h2, .about h2, .test-rides h2, .contact h2 {
+      text-align: center;
+      color: #d4af37;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .model-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .model-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 30%;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .model-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .model-card h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color: #d4af37;
+    }
+
+    .model-card ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .model-card ul li {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .model-card button {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .model-card button:hover {
+      background-color: #b38f2e;
+    }
+
+    .test-rides form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .test-rides input, .test-rides select, .test-rides button {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .test-rides button {
+      background-color: #d4af37;
+      color: #000;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .test-rides button:hover {
+      background-color: #b38f2e;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-links a:hover {
+      color: #d4af37;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .model-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .model-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JAWA Motorcycles Showroom</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#models">Models</a>
+    <a href="#about">About Us</a>
+    <a href="#test-rides">Test Rides</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Ride the Legend</h1>
+  </section>
+
+  <div class="container">
+    <section id="models" class="models">
+      <h2>Our Models</h2>
+      <div class="model-grid">
+        <!-- JAWA Perak -->
+        <div class="model-card">
+          <h3>JAWA Perak</h3>
+          <ul>
+            <li><strong>Engine:</strong> 334cc, Liquid-Cooled</li>
+            <li><strong>Power:</strong> 30.4 HP</li>
+            <li><strong>Torque:</strong> 31 Nm</li>
+            <li><strong>Transmission:</strong> 6-Speed</li>
+            <li><strong>Fuel Capacity:</strong> 14 Liters</li>
+            <li><strong>Weight:</strong> 175 kg</li>
+          </ul>
+          <button>Learn More</button>
+        </div>
+
+        <!-- JAWA 42 -->
+        <div class="model-card">
+          <h3>JAWA 42</h3>
+          <ul>
+            <li><strong>Engine:</strong> 293cc, Liquid-Cooled</li>
+            <li><strong>Power:</strong> 27 HP</li>
+            <li><strong>Torque:</strong> 28 Nm</li>
+            <li><strong>Transmission:</strong> 6-Speed</li>
+            <li><strong>Fuel Capacity:</strong> 14 Liters</li>
+            <li><strong>Weight:</strong> 170 kg</li>
+          </ul>
+          <button>Learn More</button>
+        </div>
+
+        <!-- JAWA Classic -->
+        <div class="model-card">
+          <h3>JAWA Classic</h3>
+          <ul>
+            <li><strong>Engine:</strong> 293cc, Liquid-Cooled</li>
+            <li><strong>Power:</strong> 27 HP</li>
+            <li><strong>Torque:</strong> 28 Nm</li>
+            <li><strong>Transmission:</strong> 6-Speed</li>
+            <li><strong>Fuel Capacity:</strong> 14 Liters</li>
+            <li><strong>Weight:</strong> 170 kg</li>
+          </ul>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Welcome to the official JAWA Motorcycles showroom. We are proud to carry forward the legacy of JAWA, offering you the finest motorcycles that combine classic design with modern technology. Visit us to experience the thrill of riding a JAWA.</p>
+    </section>
+
+    <section id="test-rides" class="test-rides">
+      <h2>Book a Test Ride</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <select name="model" required>
+          <option value="">Select Model</option>
+          <option value="Perak">JAWA Perak</option>
+          <option value="42">JAWA 42</option>
+          <option value="Classic">JAWA Classic</option>
+        </select>
+        <input type="date" name="date" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Visit our showroom or get in touch with us:</p>
+      <p><strong>Address:</strong> 127/976 W1 BLOCK SAKET NAGAR,Kanpur, India</p>
+      <p><strong>Phone:</strong> +91 9430880950</p>
+      <p><strong>Email:</strong> jawakanpur@gmail.com</p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2023 JAWA Motorcycles Showroom. All rights reserved.</p>
+  </footer>
+</body>
+</html>
